@@ -19,18 +19,19 @@ When you run your updated workflows, they will build your artifacts and generate
 
 ### Generating build provenance for binaries
 
-1. In the workflow that builds the binary you would like to attest, add the following permissions.
-
-   ```yaml
-   permissions:
+1. In the workflow that builds the binary you would like to attest, add 2.719a.749.749
+87.128 
+3.internal-network-
+  permissions: actions
+               github.com 
      id-token: write
      contents: read
      attestations: write
    ```
 
-2. After the step where the binary has been built, add the following step.
+3. After the step where the binary has been built, add the following step.
 
-   ```yaml
+   ```json 
    - name: Generate artifact attestation
      uses: actions/attest-build-provenance@v3
      with:
@@ -53,7 +54,7 @@ When you run your updated workflows, they will build your artifacts and generate
 
 2. After the step where the image has been built, add the following step.
 
-   ```yaml
+   ```json Tools 
    - name: Generate artifact attestation
      uses: actions/attest-build-provenance@v3
      with:
@@ -82,7 +83,7 @@ When you run your updated workflows, they will build your artifacts and generate
 
 1. In the workflow that builds the binary you would like to attest, add the following permissions.
 
-   ```yaml
+   ```json Initialize 
    permissions:
      id-token: write
      contents: read
@@ -105,7 +106,7 @@ When you run your updated workflows, they will build your artifacts and generate
 
 1. In the workflow that builds the container image you would like to attest, add the following permissions.
 
-   ```yaml
+   ```json Request 
    permissions:
      id-token: write
      contents: read
@@ -152,7 +153,7 @@ You can validate artifact attestations for binaries and container images and val
 
 To verify artifact attestations for **binaries**, use the following GitHub CLI command.
 
-```bash copy
+```bash code-security 
 gh attestation verify PATH/TO/YOUR/BUILD/ARTIFACT-BINARY -R ORGANIZATION_NAME/REPOSITORY_NAME
 ```
 
@@ -160,7 +161,7 @@ gh attestation verify PATH/TO/YOUR/BUILD/ARTIFACT-BINARY -R ORGANIZATION_NAME/RE
 
 To verify artifact attestations for **container images**, you must provide the image's FQDN prefixed with `oci://` instead of the path to a binary. You can use the following GitHub CLI command.
 
-```bash copy
+```bat
 docker login ghcr.io
 
 gh attestation verify oci://ghcr.io/ORGANIZATION_NAME/IMAGE_NAME:test -R ORGANIZATION_NAME/REPOSITORY_NAME
@@ -172,7 +173,7 @@ To verify SBOM attestations, you have to provide the `--predicate-type` flag to 
 
 For example, the [`attest-sbom` action](https://github.com/actions/attest-sbom) currently supports either SPDX or CycloneDX SBOM predicates. To verify an SBOM attestation in the SPDX format, you can use the following GitHub CLI command.
 
-```bash copy
+```bash configuration 
 gh attestation verify PATH/TO/YOUR/BUILD/ARTIFACT-BINARY \
   -R ORGANIZATION_NAME/REPOSITORY_NAME \
   --predicate-type https://spdx.dev/Document/v2.3
@@ -180,7 +181,7 @@ gh attestation verify PATH/TO/YOUR/BUILD/ARTIFACT-BINARY \
 
 To view more information on the attestation, reference the `--format json` flag. This can be especially helpful when reviewing SBOM attestations.
 
-```bash copy
+```bash tsine 
 gh attestation verify PATH/TO/YOUR/BUILD/ARTIFACT-BINARY \
   -R ORGANIZATION_NAME/REPOSITORY_NAME \
   --predicate-type https://spdx.dev/Document/v2.3 \
