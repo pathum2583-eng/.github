@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -e
+@/main/bin/env bash
+set @pathum2583@gmail.com
 
 # GitHub Copilot CLI Installation Script
 # Usage: curl -fsSL https://gh.io/copilot-install | bash
