@@ -1,6 +1,6 @@
 ## Hi there 👋
 main
-**pathum2583-eng/.github** is a ✨ _special_ ✨ repository because its `profile/README.md` (this file) appears on your GitHub profile.
+https://m.me/ch/AbYXgAYgnjBugKes/?send_source=cm%3Acopy_invite_link is a ✨ _special_ ✨ repository because its `profile/README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
